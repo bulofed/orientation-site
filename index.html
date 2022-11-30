@@ -14,38 +14,45 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <img class="logo" src="images/compass.png" alt="logo" />
-            <div class="navlinks">
-                <ul>
-                    <li><a href="#">Découvrir</a></li>
-                    <li><a href="#">Nos conseils</a></li>
-                    <li><a href="#">Courses</a></li>
-                </ul>
-                
+        <nav>
+            <div class="navbar">
+              <div class="container nav-container">
+                  <input class="checkbox" type="checkbox" name="" id="" />
+                  <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                  </div>  
+                <div class="logo">
+                  <img src="images/compass.png">
+                </div>
+                <div class="menu-items">
+                  <li><a href="#">Découvrir</a></li>
+                  <li><a href="#">Nos conseils</a></li>
+                  <li><a href="#">Courses</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Thème clair</a></li>
+                </div>
+              </div>
             </div>
-            <div class="navlinks navbar__settings">
-                    <img class="logo" src="images/lang.png" alt="lang" />
-                    <img class="logo" src="images/dark-mode.png" alt="dark-mode" />
-            </div>
-            <img class="navbar__toggle logo" src="images/menu.png" />
-        </nav>
+          </nav>
     </header>
     <main>
-        <section class="carousel">
-            <div class="slides">
-              <div class="slides-item slide-1" id="slide-1"><img class="slides-item" src="images/slider1.jpg" /></div>
-              <div class="slides-item slide-2" id="slide-2"><img class="slides-item" src="images/slider1.jpg" /></div>
-              <div class="slides-item slide-3" id="slide-3"><img class="slides-item" src="images/slider1.jpg" /></div>
-              <div class="slides-item slide-4" id="slide-4"><img class="slides-item" src="images/slider1.jpg" /></div>
-              <div class="slides-item slide-5" id="slide-5"><img class="slides-item" src="images/slider1.jpg" /></div>       
-            </div>
-            <div class="carousel__nav">
-              <a class="slider-nav" href="#slide-1">1</a>
-              <a class="slider-nav" href="#slide-2">2</a>
-              <a class="slider-nav" href="#slide-3">3</a>
-              <a class="slider-nav" href="#slide-4">4</a>
-              <a class="slider-nav" href="#slide-5">5</a>
+        <section class="img-slider">
+            <div class="slider-container">
+              
+              <div class="slide">
+                <img src="http://res.cloudinary.com/hurricane10/image/upload/v1499778218/img-26_aw9alb.jpg">
+              </div>
+              
+              <div class="slide">
+                <img src="http://res.cloudinary.com/hurricane10/image/upload/v1499778117/img-23_pumtse.jpg">
+              </div>
+          
+              <div class="slide">
+                <img src="http://res.cloudinary.com/hurricane10/image/upload/v1499778109/img-20_ljchnk.jpg">
+              </div>
+              
             </div>
           </section>
     </main>
@@ -53,4 +60,14 @@
         
     </footer>
 </body>
+
+<script>
+    const menuHamburger = document.querySelector(".navbar__toggle")
+    const navLinks = document.querySelector(".navlinks")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
 </html>
