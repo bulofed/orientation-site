@@ -7,6 +7,8 @@
 
     --clr-accent-200: hsl(43, 36%, 90%);
 
+    --clr-neutral-900: hsl(0, 0, 0);
+
     --clr-body: var(--clr-primary-500);
 
     --ff-body: 'Neue Haas Grotesk Text', sans-serif;
@@ -80,12 +82,14 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* General styles */
 
+/* Header */
+
 body {
     font-family: var(--ff-body);
     font-weight: var(--fw-regular);
     font-size: var(--fs-body);
     background-color: var(--clr-accent-200);
-    color: var(--clr-primary-500);
+    color: var(--clr-neutral-900);
     overflow: hidden;
 }
 
@@ -93,128 +97,187 @@ a {
     font-family: var(--ff-navbar);
     font-weight: var(--fw-regular);
     font-size: var(--fs-body);
-    color: var(--clr-primary-500);
+    color: var(--clr-neutral-900);
+}
+
+header {
+  z-index: 10 !important;
+}
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
 }
 
 .navbar {
-    display: flex;
-    flex-grow: 1;
-    gap: 2rem;
-    justify-content: space-between;
-    padding: 15px 2%;
-    align-items: center;
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  height: 100vh;
+  width: 100%;
+  transform: translate(150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  padding-left: -50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .logo {
-    width: 35px;
-    height: 35px;
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  font-size: 1.2rem;
+  color: #0e2431;
 }
 
-.navlinks {
-    display: none;
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
 }
 
-@media screen and
-(min-width: 40em) {
-    .navbar__toggle {
-        display: none;
-    }
-
-    .navlinks {
-        display: inline-block;
-    }
-
-    .navbar__settings {
-        display: inline-flex;
-        gap: .5rem;
-    }
-
-    .navlinks ul {
-        display: flex;
-        gap: clamp(1rem, 4.5vw, 10rem);
-    }
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
 }
 
-.carousel {
-    margin: 0 auto;
-    overflow: hidden;
-    text-align: center;
-  }
-  
-  .slides {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-  }
-  
-  .slides-item {
-    scroll-snap-align: start;
-    align-items: center;
-    border-radius: 10px;
-    display: flex;
-    flex-shrink: 0;
-    font-size: 100px;
-    justify-content: center;
-    margin: 0 1rem;
-    position: relative;
-    transform: scale(1);
-    transform-origin: center center;
-    transition: transform .5s;
-    width: 100vw;
-    aspect-ratio: 3/1;
-  }
-  
-  .carousel__nav {
-    padding: 1.25rem .5rem;
-  }
-  
-  .slider-nav {
-    align-items: center;
-    background-color: #ddd;
-    border-radius: 50%;
-    color: #000;
-    display: inline-flex;
-    height: 1.5rem;
-    justify-content: center;
-    padding: .5rem;
-    position: relative;
-    text-decoration: none;
-    width: 1.5rem;
-  }
-  
-  .slider-nav:hover,
-  .slider-nav:active {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  .slide-1 {
-    background-color: #fdc;
-  }
-  
-  .slide-2 {
-    background-color: #bfd;
-  }
-  
-  .slide-3 {
-    background-color: #cdf;
-  }
-  
-  .slide-4 {
-    background-color: #dca;
-  }
-  
-  .slide-5 {
-    background-color: #ffc;
-  }
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
 
-  .slides {
-    scrollbar-width: none;
-  }
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
 
-  .slides::-webkit-scrollbar {
-    display: none;
-  }
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
 
+/* Carousel */
+
+.img-slider {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+}
+
+.img-slider .slider-container {
+  position: absolute;
+  width: 300%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: slider 26s infinite;
+}
+
+.img-slider .slider-container .slide {
+  position: relative;
+  width: 33.33333333%;
+  height: 100%;
+  float: left;
+  overflow: hidden
+}
+
+.img-slider .slider-container .slide img {
+display: block;
+width: 100%;
+height: 100%
+}
+
+@keyframes slider {
+  0%, 25%, 100%{left: 0}
   
+  30%, 55%{left: -100%}
+  
+  60%, 85%{left: -200%}
+}
