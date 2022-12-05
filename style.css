@@ -125,4 +125,9 @@ ul {
     display: none;
 }
 
-.
+#images {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px 300px;
+}
