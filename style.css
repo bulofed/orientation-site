@@ -119,10 +119,31 @@ li {
 ul {
     gap: 3rem;
     display: flex;
+    align-items: center;
 }
 
 .menu-hamburger {
     display: none;
 }
 
-.
+.lang {
+    width: 50px;
+    height: 50px;
+}
+
+.lang::after {
+    content: url("images/lang.png");
+    transform: scale(.7);
+    display: inline-block;
+}
+
+.mode {
+    width: 50px;
+    height: 50px;
+}
+
+.mode::after {
+    content: url("images/dark-mode.png");
+    transform: scale(.7);
+    display: inline-block;
+}
