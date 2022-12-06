@@ -7,7 +7,7 @@
 
     --clr-accent-200: hsl(43, 36%, 90%);
 
-    --clr-neutral-900: hsl(0, 0, 0);
+    --clr-neutral-900: rgb(0, 0, 0);
 
     --clr-body: var(--clr-primary-500);
 
@@ -82,8 +82,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* General styles */
 
-/* Header */
-
 body {
     font-family: var(--ff-body);
     font-weight: var(--fw-regular);
@@ -99,6 +97,17 @@ a {
     font-size: var(--fs-body);
     color: var(--clr-neutral-900);
 }
+
+h1, h2 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-title);
+}
+
+h2 {
+    font-size: var(--fs-subtitle);
+}
+
+/* Header */
 
 .navbar {
     width: 100%;
@@ -122,7 +131,7 @@ ul {
     align-items: center;
 }
 
-.menu-hamburger {
+.hamburger-container {
     display: none;
 }
 
@@ -153,18 +162,64 @@ ul {
     gap: 1rem;
 }
 
+.hamburger-container .checkbox {
+    opacity: 0;
+    position: absolute;
+}
 
+.hamburger-container .checkbox:focus ~ .hamburger {
+    outline: 2px solid white;
+    outline: auto;
+    outline-offset: 4px;
+}
+
+@supports selector(:focus-visible) {
+    .hamburger-container .checkbox:not(:focus-visible) ~ .hamburger {
+      outline: none;
+    }
+}
+
+.hamburger {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    display: block;
+    transition: transform 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+    padding-top: 5px;
+}
+  
+.hamburger .slice {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.5s ease;
+}
+  
+.hamburger .slice:not(:first-child) {
+    margin-top: 10px;
+}
+
+.hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+  
+.hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(2) {
+    opacity: 0;
+}
+  
+.hamburger-container .checkbox:checked ~ .hamburger .slice:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+}
 
 @media screen and (max-width: 43em) {
     .navbar {
         padding: 0;
     }
 
-    .menu-hamburger {
-        display: block;
-    }
-
-    .mobile-menu {
+    .hamburger-container {
         display: block;
     }
 
@@ -174,14 +229,17 @@ ul {
         left: 0;
         width: 100%;
         height: 100vh;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
+    }
+
+    .mobile-menu {
+        display: flex !important;
     }
 
     ul {
         display: flex;
         flex-direction: column;
-        display: none;
     }
 }
