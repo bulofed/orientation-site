@@ -28,9 +28,13 @@
                   </div>
                 </ul>
               </div>
-              <div class="menu-hamburger">
-                <input type="checkbox" class="check-menu"/>
-                <img class="menu-logo" src="images/menu.png"/>
+              <div class="hamburger-container">
+                <input class="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation"/>
+                <label class="hamburger" for="hamburger-toggle">
+                  <span class="slice"></span>
+                  <span class="slice"></span>
+                  <span class="slice"></span>
+                </label>
               </div>
             </div>
           </nav>
@@ -44,11 +48,16 @@
 </body>
 
 <script>
-  const menuHamburger = document.querySelector(".menu-hamburger")
+  const menuHamburger = document.querySelector(".checkbox")
   const navLinks = document.querySelector(".menu-items")
 
-  menuHamburger.addEventListener('click',()=>{
-  navLinks.classList.toggle('mobile-menu')})
+  menuHamburger.addEventListener('change', ()=>{
+    if (event.currentTarget.checked) {
+      navLinks.classList.add("mobile-menu");
+    } else {
+      navLinks.classList.remove("mobile-menu");
+    }
+  })
 </script>
 
 </html>
