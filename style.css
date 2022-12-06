@@ -147,3 +147,41 @@ ul {
 .lang span, .mode span {
     display: none;
 }
+
+.icons {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+@media screen and (max-width: 43em) {
+    .navbar {
+        padding: 0;
+    }
+
+    .menu-hamburger {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .menu-items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+}
