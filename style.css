@@ -126,24 +126,23 @@ ul {
     display: none;
 }
 
-.lang {
+.lang, .mode {
     width: 50px;
     height: 50px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
 }
 
-.lang::after {
-    content: url("images/lang.png");
-    transform: scale(.7);
-    display: inline-block;
+.lang {
+    background-image: url(images/lang.png);
 }
 
 .mode {
-    width: 50px;
-    height: 50px;
+    background-image: url(images/dark-mode.png);
 }
 
-.mode::after {
-    content: url("images/dark-mode.png");
-    transform: scale(.7);
-    display: inline-block;
+.lang span, .mode span {
+    display: none;
 }
