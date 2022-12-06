@@ -22,8 +22,10 @@
                   <li><a href="#">Découvrir</a></li>
                   <li><a href="#">Courses</a></li>
                   <li><a href="#">Nos conseils</a></li>
-                  <li><button class="lang"><span>Langue</span></button></li>
-                  <li><button class="mode"><span>Mode sombre</span></button></li>
+                  <div class="icons">
+                    <li><button class="lang"><span>Langue</span></button></li>
+                    <li><button class="mode"><span>Mode sombre</span></button></li>
+                  </div>
                 </ul>
               </div>
               <div class="menu-hamburger">
@@ -42,12 +44,11 @@
 </body>
 
 <script>
-    const menuHamburger = document.querySelector(".navbar__toggle")
-    const navLinks = document.querySelector(".navlinks")
+  const menuHamburger = document.querySelector(".menu-hamburger")
+  const navLinks = document.querySelector(".menu-items")
 
-    menuHamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('mobile-menu')
-    })
+  menuHamburger.addEventListener('click',()=>{
+  navLinks.classList.toggle('mobile-menu')})
 </script>
 
 </html>
