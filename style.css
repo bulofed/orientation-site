@@ -24,6 +24,7 @@
     --fs-title: 2.125rem;
     --fs-subtitle: 1.75rem;
     --fs-big: 2.5rem;
+    --fs-rights: 0.75rem;
 }
 
 /* Reset */
@@ -177,6 +178,38 @@ ul {
     display: none;
 }
 
+
+#images {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px 300px;
+    margin-bottom: 40px;
+}
+
+footer{
+    width: 100%;
+}
+
+.footer-container {
+    margin: 0px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    text-align: center;
+    font-size: var(--fs-title);
+}
+
+#nom_footer{
+    font-size: var(--fs-body);
+}
+
+#droits{
+    font-size: 60%;
+    font-size: var(--fs-rights);
+=======
 .icons {
     display: flex;
     gap: 1rem;
@@ -262,4 +295,3 @@ ul {
         display: flex;
         flex-direction: column;
     }
-}
