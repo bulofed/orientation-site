@@ -19,16 +19,22 @@
               <img class="logo" src="images/compass.png">
               <div class="menu-items">
                 <ul>
-                  <li><a href="#">Découvrir</a></li>
+                  <li><a href="decouvrir.html">Découvrir</a></li>
                   <li><a href="#">Courses</a></li>
                   <li><a href="#">Nos conseils</a></li>
-                  <li><button class="lang"><span>Langue</span></button></li>
-                  <li><button class="mode"><span>Mode sombre</span></button></li>
+                  <div class="icons">
+                    <li><button class="lang"><span>Langue</span></button></li>
+                    <li><button class="mode"><span>Mode sombre</span></button></li>
+                  </div>
                 </ul>
               </div>
-              <div class="menu-hamburger">
-                <input type="checkbox" class="check-menu"/>
-                <img class="menu-logo" src="images/menu.png"/>
+              <div class="hamburger-container">
+                <input class="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation"/>
+                <label class="hamburger" for="hamburger-toggle">
+                  <span class="slice"></span>
+                  <span class="slice"></span>
+                  <span class="slice"></span>
+                </label>
               </div>
             </div>
           </nav>
@@ -62,19 +68,41 @@
           </div>
         </div>
       </div>
+        <h1>Nouveautés</h1>
+        <section id="images">
+            <a href="#">
+              <img src="https://fakeimg.pl/500x300/">
+            </a>
+            <a href="#">
+              <img src="https://fakeimg.pl/500x300/"> 
+            </a>
+            <a href="#">
+              <img src="https://fakeimg.pl/500x300/">
+            </a>
+            <a href="#">
+              <img src="https://fakeimg.pl/500x300/">
+            </a>
+        </section>
     </main>
     <footer>
-        
+        <div class="footer-container"> 
+            <div id="nom_footer"><p>XORIENTATION</p></div>
+            <div><a id="droits" href="#">Tout droits réservés</a></div>
+        </div>
     </footer>
 </body>
 
 <script>
-    const menuHamburger = document.querySelector(".navbar__toggle")
-    const navLinks = document.querySelector(".navlinks")
+  const menuHamburger = document.querySelector(".checkbox")
+  const navLinks = document.querySelector(".menu-items")
 
-    menuHamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('mobile-menu')
-    })
+  menuHamburger.addEventListener('change', ()=>{
+    if (event.currentTarget.checked) {
+      navLinks.classList.add("mobile-menu");
+    } else {
+      navLinks.classList.remove("mobile-menu");
+    }
+  })
 </script>
 
 </html>

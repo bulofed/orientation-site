@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <title>Orientation</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+              <img class="logo" src="images/compass.png">
+              <div class="menu-items">
+                <ul>
+                  <li><a href="#">Découvrir</a></li>
+                  <li><a href="#">Courses</a></li>
+                  <li><a href="#">Nos conseils</a></li>
+                  <div class="icons">
+                    <li><button class="lang"><span>Langue</span></button></li>
+                    <li><button class="mode"><span>Mode sombre</span></button></li>
+                  </div>
+                </ul>
+              </div>
+              <div class="hamburger-container">
+                <input class="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation"/>
+                <label class="hamburger" for="hamburger-toggle">
+                  <span class="slice"></span>
+                  <span class="slice"></span>
+                  <span class="slice"></span>
+                </label>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <article class="article">
+            <div class="grid">
+                <img src="https://images.unsplash.com/photo-1669596445892-5324a007bdff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="">
+                <div class="article-text" id="article-text-1">
+                    <h1>Qu'est ce que c'est ?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam maiores temporibus dolores velit delectus vel explicabo, soluta quo sint, repellat eaque omnis architecto ratione laudantium nisi saepe, fugiat repudiandae aperiam!</p>
+                </div>
+                <div class="article-text" id="article-text-2">
+                    <h1>Pour qui s'adresse-t-elle ?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio neque reprehenderit commodi quae sit, tenetur ut dolorem, deserunt nemo suscipit officiis, aspernatur repudiandae! Ab excepturi eaque optio similique repudiandae voluptate.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1669596445892-5324a007bdff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="">
+                <img src="https://images.unsplash.com/photo-1669596445892-5324a007bdff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="">
+                <div class="article-text" id="article-text-3">
+                    <h1>Pourquoi en faire ?</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint molestias voluptatibus aliquid iste tenetur? Nam, similique sunt ab officia maxime voluptates, minima voluptas, iure ducimus molestias beatae quaerat tempore amet.</p>
+                </div>
+            </div>
+          </article>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+
+<script>
+  const menuHamburger = document.querySelector(".checkbox")
+  const navLinks = document.querySelector(".menu-items")
+
+  menuHamburger.addEventListener('change', ()=>{
+    if (event.currentTarget.checked) {
+      navLinks.classList.add("mobile-menu");
+    } else {
+      navLinks.classList.remove("mobile-menu");
+    }
+  })
+</script>
+
+</html>
