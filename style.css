@@ -191,7 +191,7 @@ a {
     align-items: auto;
     justify-content: center;
     max-width: 1400px;
-    margin: 0 3rem ;
+    margin: 5rem 3rem ;
     width: 90%;
     background-color: var(--clr-primary-400);
     padding: 1rem;
@@ -247,12 +247,19 @@ a {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
-    margin: 20px 300px;
-    margin-bottom: 40px;
+    margin: 2rem;
+    
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer{
     width: 100%;
+    margin: 1rem 0;
 }
 
 .footer-container {
@@ -273,7 +280,8 @@ h1{
 #droits{
     font-size: 60%;
     font-size: var(--fs-rights);
-=======
+}
+
 .icons {
     display: flex;
     gap: 1rem;
