@@ -359,6 +359,7 @@ h1{
         display: flex;
         flex-direction: column;
     }
+<<<<<<< Updated upstream
 }
 
 /* Article */
@@ -389,3 +390,6 @@ h1{
     grid-column: 1/3;
     grid-row: 3;
 }
+=======
+}
+>>>>>>> Stashed changes
