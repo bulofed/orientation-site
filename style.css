@@ -371,6 +371,37 @@ h1{
     }
 }
 
+/* Footer */
+
+footer{
+    width: 100%;
+}
+
+.footer-container {
+    margin: 0px 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nom_footer{
+    font-size: var(--fs-body);
+}
+
+#droits{
+    font-size: 60%;
+    font-size: var(--fs-rights);
+}
+
+/* Nouveautées */
+
+#images {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px 300px;
+    margin-bottom: 40px;
+}
+
 /* Article */
 
 .grid {
