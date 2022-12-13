@@ -12,19 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <title>Orientation</title>
 </head>
-<body>
+<body class="light" id="mode">
     <header>
         <nav class="navbar">
             <div class="container nav-container">
-              <img class="logo" src="images/compass.png">
+              <img class="logo" src="images/compass.svg">
               <div class="menu-items">
                 <ul>
                   <li><a href="pages/decouvrir.html">Découvrir</a></li>
                   <li><a href="pages/courses.html">Courses</a></li>
                   <li><a href="#">Nos conseils</a></li>
                   <div class="icons">
-                    <li><button class="lang"><span>Langue</span></button></li>
-                    <li><button class="mode"><span>Mode sombre</span></button></li>
+                    <li><button class="lang light" id="icon-mode1"><span>Langue</span></button></li>
+                    <li><button class="mode lune light" id="icon-mode2"><span>Mode sombre</span></button></li>
                   </div>
                 </ul>
               </div>
@@ -97,7 +97,7 @@
         </div>
     </footer>
 </body>
-
+<script src="script.js"></script>
 <script>
   const menuHamburger = document.querySelector(".checkbox")
   const navLinks = document.querySelector(".menu-items")

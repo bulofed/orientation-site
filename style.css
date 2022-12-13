@@ -7,7 +7,9 @@
 
     --clr-accent-200: hsl(43, 36%, 90%);
 
-    --clr-neutral-900: rgb(0, 0, 0);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-800: hsl(225, 6%, 13%);
+    --clr-neutral-900: rgb(0, 0%, 0%);
 
     --clr-body: var(--clr-primary-500);
 
@@ -76,7 +78,8 @@ svg {
 input,
 button,
 textarea,
-select {
+select,
+a {
     font: inherit;
 }
 
@@ -104,16 +107,24 @@ body {
     font-family: var(--ff-body);
     font-weight: var(--fw-regular);
     font-size: var(--fs-body);
+    overflow: scroll;
+}
+
+body.light {
     background-color: var(--clr-accent-200);
     color: var(--clr-neutral-900);
-    overflow: scroll;
+}
+
+body.dark {
+    background-color: var(--clr-neutral-800);
+    color: var(--clr-neutral-100);
 }
 
 a {
     font-family: var(--ff-navbar);
     font-weight: var(--fw-regular);
     font-size: var(--fs-body);
-    color: var(--clr-neutral-900);
+    color: inherit;
 }
 
 h1,
@@ -294,6 +305,7 @@ a {
     max-width: 1500px;
     width: 90%;
     background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-900);
     padding: 3rem;
     padding-bottom: 7rem;
     display: flex;
