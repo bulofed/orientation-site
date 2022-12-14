@@ -476,6 +476,14 @@ iframe {
     grid-row: 1;
 }
 
+.article-img {
+    height: 250px;
+    align-self: center;
+    justify-self: center;
+    border: solid white 5px;
+    border-radius: 2rem;
+}
+
 #article-img-1 {
     grid-column: 4/6;
     grid-row: 1;

@@ -12,34 +12,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <title>Orientation</title>
 </head>
-<body>
+<body class="light" id="mode">
     <header>
         <nav class="navbar">
             <div class="container nav-container">
-            <a href="../index.html">
+                <a href="../index.html">
                 <img class="logo" src="../images/compass.png">
-            </a>
-            <div class="menu-items">
+                </a>
+                <div class="menu-items">
                 <ul>
-                <li><a href="#">Découvrir</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="#">Nos conseils</a></li>
-                <div class="icons">
-                    <li><button class="lang"><span>Langue</span></button></li>
-                    <li><button class="mode"><span>Mode sombre</span></button></li>
-                </div>
+                    <li><a href="decouvrir.html">Découvrir</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="#">Nos conseils</a></li>
+                    <div class="icons">
+                    <li><button class="lang lang-light" id="icon-mode1"><span>Langue</span></button></li>
+                    <li><button class="mode lune" id="icon-mode2"><span>Mode sombre</span></button></li>
+                    </div>
                 </ul>
-            </div>
-            <div class="hamburger-container">
+                </div>
+                <div class="hamburger-container">
                 <input class="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation"/>
                 <label class="hamburger" for="hamburger-toggle">
-                <span class="slice"></span>
-                <span class="slice"></span>
-                <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
+                    <span class="slice"></span>
                 </label>
+                </div>
             </div>
-            </div>
-        </nav>
+            </nav>
     </header>
     <main>
         <div>
@@ -60,3 +60,17 @@
         </div>
     </main>
 </body>
+<script src="../script.js"></script>
+<script>
+    const menuHamburger = document.querySelector(".checkbox")
+    const navLinks = document.querySelector(".menu-items")
+    
+    menuHamburger.addEventListener('change', ()=>{
+        if (event.currentTarget.checked) {
+        navLinks.classList.add("mobile-menu");
+        } else {
+        navLinks.classList.remove("mobile-menu");
+        }
+    })
+  </script>
+</html>
