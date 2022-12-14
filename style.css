@@ -821,3 +821,145 @@ td{
     line-height: 35px;
     text-align: justify;
 }
+
+/*Nos-conseils*/
+
+/*Texte*/
+
+h1 {font-weight: bold;}
+
+.p1,.p2,.p3{text-align: left;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 2rem;
+}
+
+.t1,.t3{text-align: left;
+}
+
+.t2{text-align: right;}
+
+/*image*/
+.img1{margin: auto;}
+/*search-bar*/
+
+.contain{width: 35%;
+    margin: auto;
+    padding-bottom: 1.25rem;}
+
+.carré{background-color: #f0f0f0;
+    border-radius: 1.875rem;}
+
+.container_search {
+    height :6rem;
+    background-position: center;
+    background-size: cover;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar{width: 21.875rem;
+height:2.8rem ;
+max-width: 43.75rem;
+display: flex;
+align-items: center;
+border: solid 0.125rem;
+border-radius:3.75rem;
+backdrop-filter: blur(0.25rem) saturate(180%);;}
+
+.search-bar input{background :transparent;
+flex : 1;
+border : 0;
+outline : none;
+padding:1.5rem 1.25rem;
+font-size: 1.25rem;
+color : black }
+
+::placeholder{
+    color: black;
+}
+
+.loupe{
+    width :1rem;
+    height :1rem;
+    display: flex;
+}
+
+.search-bar button{
+    border : 0;
+    border-radius :0;
+    width :3.75rem;
+    height : 3.75rem;
+    background : #FFFFFF;
+    cursor :pointer;
+    background-color: transparent;
+}
+
+::placeholder{font-style: italic;
+}
+
+.inscription{text-align: center;}
+
+.inscription :hover{text-decoration: underline;}
+
+.sign-up{color: #4C62D7;}
+
+/*TEXTE*/
+.FAQ,.bas-img,.Ecrit,.Texte-q {text-align:center;
+    font-weight :bold;
+    padding: 1rem;}
+
+.Ecrit{padding: 0rem;}
+
+.FAQ{padding-top: 1.5rem;}
+
+.Texte-q{padding-bottom: 2rem;}
+
+/*Question_reponse*/
+
+.Question_reponse{display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;}
+
+.container-qr{display: flex;
+width: 100%;
+background-size: cover;
+align-items: center;
+justify-content: center;
+margin: auto;
+padding-bottom: 2rem;
+display: flex;
+flex-direction: column;}
+
+.but_exp{ border: 0;
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;}
+
+.container-q{width: 75%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+border-bottom :solid 1px grey;}
+
+#texte_1,#texte_2,#texte_3{display: none;
+text-align: left;
+width: 75%;}
+
+.show_1,.show_2,.show_3{display: block;}
+
+.hide_1,.hide_2,.hide_3{display: none;}
+
+@media screen and (max-width:65em) {
+    .t2{text-align: left;}
+
+    .contain{width: 100%;}
+
+    .p1,.p2,.p3{text-align: left;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
