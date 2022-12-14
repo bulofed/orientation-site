@@ -290,6 +290,7 @@ a {
 
     .hamburger-container {
         display: block;
+        z-index: 101;
     }
 
     .menu-items {
@@ -301,6 +302,8 @@ a {
         display: none;
         justify-content: center;
         align-items: center;
+        background-color: #ffe7a5;
+        z-index: 100;
     }
 
     .mobile-menu {
@@ -719,7 +722,7 @@ td{
     position: relative;
 }
 
-@media screen and (max-width: 65em){
+@media screen and (max-width: 78em){
     .titre-top {
         font-size: 1.5rem;
     }
@@ -782,7 +785,7 @@ td{
     }
 
     #tableau{
-        margin-left: 1rem;
+        margin: 0 auto;
         width: max-content;
         max-width: 358px;
     }
@@ -805,7 +808,8 @@ td{
     }
 }
 
-.mention_txt{
+.mention_txt, .title-mention {
     padding: 3rem;
     line-height: 35px;
+    text-align: justify;
 }
