@@ -657,5 +657,6 @@ td{
 }
 
 .mention_txt{
-    padding: 2rem;
+    padding: 3rem;
+    line-height: 35px;
 }
