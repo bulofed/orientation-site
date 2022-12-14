@@ -834,10 +834,10 @@ td{
 
 h1 {font-weight: bold;}
 
-.p1,.p2,.p3{text-align: left;
-    padding-right: 3rem;
-    padding-left: 3rem;
-    padding-bottom: 2rem;
+.justify{
+    text-align: justify;
+    padding: 3rem;
+    padding-bottom: 1rem;
 }
 
 .t1,.t3{text-align: left;
@@ -846,7 +846,10 @@ h1 {font-weight: bold;}
 .t2{text-align: right;}
 
 /*image*/
-.img1{margin: auto;}
+.img1{
+    margin: auto;
+    padding: 1rem 0;
+}
 /*search-bar*/
 
 .contain{width: 35%;
