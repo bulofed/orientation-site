@@ -655,3 +655,7 @@ td{
 .bonhomme{
     position: relative;
 }
+
+.mention_txt{
+    padding: 2rem;
+}
