@@ -200,6 +200,22 @@ a {
     background-image: url(images/dark-mode.png);
 }
 
+.lang-light {
+    background-image: url(images/lang.png);
+}
+
+.lang-dark {
+    background-image: url(images/lang-dark.png);
+}
+
+.lune {
+    background-image: url(images/dark-mode.png);
+}
+
+.soleil {
+    background-image: url(images/sun.png);
+}
+
 .lang span,
 .mode span {
     display: none;
@@ -305,7 +321,6 @@ a {
     max-width: 1500px;
     width: 90%;
     background-color: var(--clr-primary-400);
-    color: var(--clr-neutral-900);
     padding: 3rem;
     padding-bottom: 7rem;
     display: flex;
