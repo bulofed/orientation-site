@@ -713,3 +713,8 @@ td{
 .bonhomme{
     position: relative;
 }
+
+.mention_txt{
+    padding: 3rem;
+    line-height: 35px;
+}
