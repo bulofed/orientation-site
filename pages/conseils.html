@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <title>Orientation</title>
+  </head>
+  <body class="light" id="mode">
+    <header>
+      <nav class="navbar">
+        <div class="container nav-container">
+          <a href="../index.html"><img class="logo" src="../images/compass.png"></a>
+          <div class="menu-items">
+            <ul>
+              <li><a href="decouvrir.html">Découvrir</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="conseils.html">Nos conseils</a></li>
+              <div class="icons">
+                <li><a href="../anglais/conseils-en.html" class="lang lang-light" id="icon-mode1"><span>Langue</span></a></li>
+                <li><button class="mode lune" id="icon-mode2"><span>Mode sombre</span></button></li>
+              </div>
+            </ul>
+          </div>
+          <div class="hamburger-container">
+            <input class="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation"/>
+            <label class="hamburger" for="hamburger-toggle">
+              <span class="slice"></span>
+              <span class="slice"></span>
+              <span class="slice"></span>
+            </label>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article class="article-conseil">
+        <div class="p1">
+            <h1 class="t1">PRÉPARATION</h1>
+            <p>Premièrement tout orienteur doit avoir une tenue adaptée à la course et évidemment les chaussures qui vont avec, la plupart des courses vous feront traverser de la végétation et passer par des chemins escarpés. Il vous faudra également prévoir des vêtements si le temps se met à changer. Chaque type de course nécessitera un équipement différent, par exemple une course de nuit nécessitera une lampe frontale, un raid nécessitera des vivres qu’il faudra gérer. Un “doigt électronique” vous sera également pratique si vous pratiquez des courses en club ou avec un organisme dédié, le doigt vous permettra de valider vos balises d’un coup de scan et également de vous traquer grâce à une puce intégrée, elle peut vous être prêtée par l’organisme qui gère la course.</p>
+        </div>
+        <div class="p2">
+            <h1 class="t2">LES ERREURS À NE PAS FAIRE</h1>
+            <p>La première erreur à ne pas faire est de se précipiter, le choix de l'itinéraire est une composante principale de la course qu’il ne faut pas bâcler. Il faut ensuite rester concentré, un débutant  peut facilement se perdre avec même avec la carte et la boussole et cela peut représenter une grande perte de temps sur votre course. Il vous faut donc suivre votre tracé avec la plus grande précision et ne pas partir sans l’avoir préparé. Enfin prenez votre temps, celà peut sembler contradictoire dans une course mais vous devez avant tout être endurant, économisez votre énergie et restez constant tout au long de la course.
+            </p>
+          </div>
+        <div class="p3">
+            <h1 class="t3">CARTE ET BOUSSOLE</h1>
+            <p>Les cartes de CO différent des cartes classiques par leur précision et leur mise en forme, étudiez bien la légende pour ne pas voir d’imprévus sur la route. Au niveau de la boussole il va vous falloir connaître l’Azimut : pour trouver certaines balises vous allez devoir vous diriger par rapport à l’Azimut d’un point ou d’une autre balise, par exemple la prochaine balise que vous cherchez est à l’azimut 45° de votre balise actuelle. Mais qu’est ce que ça signifie ? l’azimut est une valeur en degrés formée par l’angle entre le nord et la direction que vous cherchez. Ce petit schéma pourra vous aider à comprendre: </p>
+        </div>
+      </article>
+      <article class="faq">
+        <img class = "img1" src = "../images/boussole.png">
+        <p class = "FAQ">FAQ</p>
+        <p class = "bas-img">Question les plus posées</p>
+        <p class = "Texte-q">Des questions ? Nous sommes la pour vous répondre !</p>
+        <div class = "Question-reponse">
+          <div class="container-qr">
+            <div class="container-q">
+              <h1 class="question1">Où puis je pratiquer ce sport ?</h1>
+              <div class="show_1" id="to_hide_1">
+                <button type="button" class="but_exp" onclick="toggle_text_1();"><img src="../images/add_circle.svg" class="expand"></button>
+              </div>
+              <div class="hide_1" id="to_show_1">
+                <button type="button" class="but_exp" onclick="toggle_text_1();"><img src="../images/minus.svg" class="expand"></button>
+              </div>
+            </div>
+            <p id="texte_1">Il peut se pratiquer n"importe où dans la nature, du moment qu"il y ait des endroits atteignables ou pouvoir y déposer une balise</p>
+          </div>
+          <div class="container-qr">
+            <div class="container-q">
+              <h1 class="question2">Le matériel revient-il cher ?</h1>
+              <div class="show_2" id="to_hide_2">
+                <button type="button" class="but_exp" onclick="toggle_text_2();"><img src="../images/add_circle.svg" class="expand"></button>
+              </div>
+              <div class="hide_2" id="to_show_2">
+                <button type="button" class="but_exp" onclick="toggle_text_2();"><img src="../images/minus.svg" class="expand"></button>
+              </div>
+            </div>
+            <p id="texte_2">Non, ce sport est peu coputeux étant donné qu'il suffit d"une tenue de sport, et optionnellement un doigt électronique.</p>
+          </div>
+          <div class="container-qr">
+            <div class="container-q">
+              <h1 class="question4">Quels sont les dangers ?</h1>
+              <div class="show_3" id="to_hide_3">
+                <button type="button" class="but_exp" onclick="toggle_text_3();"><img src="../images/add_circle.svg" class="expand"></button>
+              </div>
+              <div class="hide_3" id="to_show_3">
+                <button type="button" class="but_exp" onclick="toggle_text_3();"><img src="../images/minus.svg" class="expand"></button>
+              </div>
+            </div>
+            <p id="texte_3">En temps normal, aucun danger n'est prévu, cependant, les terrains penchés peuvent être glissant en temps de pluie, il faut donc faire attention ou mettre ses pieds.</p>
+          </div>
+        </div>
+      </article>
+      <div class="contain">
+          <div class="carré">
+          <p class = "Ecrit">Vous avez encore des questions ?</p>
+              <div class = "container_search">
+                  <form action ="https://www.google.com/search" method="get" class = "search-bar">
+                      <input type="text" placeholder="Posez votre question !" name ="q">
+                      <button type = "submit"><img class = "loupe" src="../images/search_icon.png"></button>
+                  </form>
+              </div>
+              <p class ="inscription">Pas encore inscrit ? <a class =  "sign-up" href = "#">Cliquez ici</a></p>
+          </div>
+      </div>
+    </main>
+    <footer>
+        <div class="footer-container"> 
+            <div id="nom_footer"><p>XORIENTATION</p></div>
+            <div><a id="droits" href="#">Tout droits réservés</a></div>
+        </div>
+    </footer>
+  </body>
+  <script src="../script.js"></script>
+  <script>
+    const menuHamburger = document.querySelector(".checkbox")
+    const navLinks = document.querySelector(".menu-items")
+
+    menuHamburger.addEventListener("change", ()=>{
+      if (event.currentTarget.checked) {
+        navLinks.classList.add("mobile-menu");
+      } else {
+        navLinks.classList.remove("mobile-menu");
+      }
+    })
+  </script>
+</html>

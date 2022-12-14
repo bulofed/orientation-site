@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+    <title>Orientation</title>
+  </head>
+  <body class="light" id="mode">
+    <header>
+      <nav class="navbar">
+        <div class="container nav-container">
+          <a href="../index.html"><img class="logo" src="../images/compass.png"></a>
+          <div class="menu-items">
+            <ul>
+              <li><a href="decouvrir-en.html">Discover</a></li>
+              <li><a href="courses-en.html">Races</a></li>
+              <li><a href="conseils-en.html">Our tips</a></li>
+              <div class="icons">
+                <li><a href="../pages/conseils.html" class="lang lang-light" id="icon-mode1"><span>Language</span></a></li>
+                <li><button class="mode lune" id="icon-mode2"><span>Dark mode</span></button></li>
+              </div>
+            </ul>
+          </div>
+          <div class="hamburger-container">
+            <input class="checkbox" type="checkbox" id="hamburger-toggle" aria-label="Toggle Navigation"/>
+            <label class="hamburger" for="hamburger-toggle">
+              <span class="slice"></span>
+              <span class="slice"></span>
+              <span class="slice"></span>
+            </label>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <article class="article-conseil">
+        <div class="p1">
+            <h1 class="t1">PREPARATION</h1>
+            <p>First the orienteer must have the right outfit and of course good shoes because most of the races will feature some vegetation and steep paths. You will also need warm clothes in case of rain or any other weather change. Every race can require a different equipment,  for example at night you’ll need a headlamp, a raid will require food and water that you will have to manage. A Finger Stick would also be useful if you join a club or participate in a championship, this device will allow you to confirm your beacons with just a scan but also to track you with an included chip.</p>
+        </div>
+        <div class="p2">
+            <h1 class="t2">MISTAKES TO AVOID</h1>
+            <p>The first mistake you must avoid is to rush, choosing your route is an important step of the race and you cannot botch it. Moreover you’ll need to stay focused, a beginner can easily get lost even with a map and a compass and you could lose a lot of precious time. Try to stick a maximum to the route you chose. Finally take your time, find a good rhythm because orienteering isn’t about speed but mostly about stamina, you'll have to keep a rhythm to be efficient from the start to the end.</p>
+          </div>
+        <div class="p3">
+            <h1 class="t3">MAP AND COMPASS</h1>
+            <p>Orienteering maps are not quite the same as common maps, they differ by their precision and their key that you will have to learn.To use the compass you’ll have to learn the azimuth: to find beacons you will sometimes have to follow a direction given by an azimuth. The azimuth is a value formed by the angle between north and the direction you have to follow.</p>
+        </div>
+      </article>
+      <article class="faq">
+        <img class = "img1" src = "../images/boussole.png">
+        <p class = "FAQ">FAQ</p>
+        <p class = "bas-img">Frequently Asked Questions</p>
+        <p class = "Texte-q">Any questions ? We're help to anwser !</p>
+        <div class = "Question-reponse">
+          <div class="container-qr">
+            <div class="container-q">
+              <h1 class="question1">Where can I practice ?</h1>
+              <div class="show_1" id="to_hide_1">
+                <button type="button" class="but_exp" onclick="toggle_text_1();"><img src="../images/add_circle.svg" class="expand"></button>
+              </div>
+              <div class="hide_1" id="to_show_1">
+                <button type="button" class="but_exp" onclick="toggle_text_1();"><img src="../images/minus.svg" class="expand"></button>
+              </div>
+            </div>
+            <p id="texte_1">Il peut se pratiquer n"importe où dans la nature, du moment qu"il y ait des endroits atteignables ou pouvoir y déposer une balise</p>
+          </div>
+          <div class="container-qr">
+            <div class="container-q">
+              <h1 class="question2">Is it expensive ?</h1>
+              <div class="show_2" id="to_hide_2">
+                <button type="button" class="but_exp" onclick="toggle_text_2();"><img src="../images/add_circle.svg" class="expand"></button>
+              </div>
+              <div class="hide_2" id="to_show_2">
+                <button type="button" class="but_exp" onclick="toggle_text_2();"><img src="../images/minus.svg" class="expand"></button>
+              </div>
+            </div>
+            <p id="texte_2">Non, ce sport est peu coputeux étant donné qu'il suffit d"une tenue de sport, et optionnellement un doigt électronique.</p>
+          </div>
+          <div class="container-qr">
+            <div class="container-q">
+              <h1 class="question4">What are the dangers ?</h1>
+              <div class="show_3" id="to_hide_3">
+                <button type="button" class="but_exp" onclick="toggle_text_3();"><img src="../images/add_circle.svg" class="expand"></button>
+              </div>
+              <div class="hide_3" id="to_show_3">
+                <button type="button" class="but_exp" onclick="toggle_text_3();"><img src="../images/minus.svg" class="expand"></button>
+              </div>
+            </div>
+            <p id="texte_3">En temps normal, aucun danger n'est prévu, cependant, les terrains penchés peuvent être glissant en temps de pluie, il faut donc faire attention ou mettre ses pieds.</p>
+          </div>
+        </div>
+      </article>
+      <div class="contain">
+          <div class="carré">
+          <p class = "Ecrit">Any questions ?</p>
+              <div class = "container_search">
+                  <form action ="https://www.google.com/search" method="get" class = "search-bar">
+                      <input type="text" placeholder="Posez votre question !" name ="q">
+                      <button type = "submit"><img class = "loupe" src="../images/search_icon.png"></button>
+                  </form>
+              </div>
+              <p class ="inscription">Still not with us ? <a class =  "sign-up" href = "#">Sign in</a></p>
+          </div>
+      </div>
+    </main>
+    <footer>
+        <div class="footer-container"> 
+            <div id="nom_footer"><p>Trixorientation</p></div>
+            <div><a id="droits" href="#">All rights reserved</a></div>
+        </div>
+    </footer>
+  </body>
+  <script src="../script.js"></script>
+  <script>
+    const menuHamburger = document.querySelector(".checkbox")
+    const navLinks = document.querySelector(".menu-items")
+
+    menuHamburger.addEventListener("change", ()=>{
+      if (event.currentTarget.checked) {
+        navLinks.classList.add("mobile-menu");
+      } else {
+        navLinks.classList.remove("mobile-menu");
+      }
+    })
+  </script>
+</html>
