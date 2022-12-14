@@ -630,7 +630,18 @@ iframe {
     width: 20px;
     height: 20px;
     border-radius: 10px;
+}
+
+.facile {
     background: #96BF48;
+}
+
+.moyen {
+    background: #fee460;
+}
+
+.difficile {
+    background: #ff6363;
 }
 
 .lien-course{
