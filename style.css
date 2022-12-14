@@ -221,6 +221,11 @@ a {
     display: none;
 }
 
+#droits{
+    font-size: 60%;
+    font-size: var(--fs-rights);
+}
+
 .icons {
     display: flex;
     gap: 1rem;
@@ -712,6 +717,92 @@ td{
 
 .bonhomme{
     position: relative;
+}
+
+@media screen and (max-width: 65em){
+    .titre-top {
+        font-size: 1.5rem;
+    }
+
+    .dif{
+        font-size: 1.5rem;
+    }
+
+    .lien-course{
+        font-size: 1.2rem;
+    }
+
+    .info-course > p{
+        font-size: 1rem;
+    }
+   
+    .recherche{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #barre{
+        margin: auto;
+    }
+
+    .text{
+        max-width: 350px;
+    }
+
+    #lien-bouton{
+        margin: auto;
+        margin-top: 1rem;
+        min-width: 200px;
+    }
+    
+    .types-course{
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        margin: auto;
+        min-width: 0px;
+    }
+
+    .info-course{
+        text-align: center;
+        display: block;
+    }
+
+    .grille, #debutant, #intermediaire, #expert{
+        max-width: 350px;
+        margin: auto 1rem;
+    }
+
+    .img-pb{
+        display: none;
+    }
+
+    #tableau, table{
+        min-width: 0px;
+    }
+
+    #tableau{
+        margin-left: 1rem;
+        width: max-content;
+        max-width: 358px;
+    }
+
+    .entete-table{
+        font-size: 1rem;
+    }
+
+    td{
+        font-size: 0.8rem;
+    }
+
+    #nom_footer{
+        padding: auto;
+    }
+
+    #nom_footer > p{
+        font-size: 0.8rem;
+        margin: 9px auto;
+    }
 }
 
 .mention_txt{
